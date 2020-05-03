@@ -12,5 +12,8 @@ public class main {
 		for (int i = 0; i < offset; i++)
 		System.out.print(" ");
 		System.out.println(pat);
+		
+		System.out.print("Yicheng Yang Git Test");
+		
 	}
 }
