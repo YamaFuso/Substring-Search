@@ -11,6 +11,10 @@ public class KMP2 {
 	private long lastSearchTime = -1;
 
     
+	public KMP2(String pattern) {
+		this(pattern.toCharArray());
+	}
+	
     /**
      * Compute temporary array to maintain size of suffix which is same as prefix
      * Time/space complexity is O(size of pattern)
@@ -52,6 +56,10 @@ public class KMP2 {
 		counter = 0;
         
         counter = 0;
+    }
+    
+    public int search(String text) {
+    	return search(text.toCharArray());
     }
     
     /**

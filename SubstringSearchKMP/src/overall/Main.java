@@ -145,47 +145,431 @@ public class Main {
 		
 		// Condition 1: TEXT - all 0, 
 			// Condition 1.1 - find all 1
-			// Condition 1.2 - find (N-1) 0 + 1 x 1
-			// Condition 1.3 - find (N/2) 0 + 1 + (N/2) 0
+			// Condition 1.2 - find (N-2) 0 + 1 + 0
+			// Condition 1.3 - find (N/2) 0 + 1 + (N/2)0
 			// Condition 1.4 - find random
 		
-		myWriter = new BufferedWriter(new FileWriter("SearchResult" + "BinaryWorstCase" + ".txt", false));
+		myWriter = new BufferedWriter(new FileWriter("SearchResult" + "BinaryWorstCaseCondition1" + ".txt", false));
 
 	
 		myWriter.write("--- CONDITION 1.1 FIND ALL ONES ---\n\n");
 		myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
 
-		// Length of Pattern
 		for (int i = 2; i <= 8192; i*=2) {
-			myWriter.write("Current i : " + i + "\n");
+			myWriter.write("Text Length : " + i + "\n");
 			String txt1 = Generater.generateBinaryText("all zeros", i);
-			String pattern = Generater.generateBinaryText("all ones", i);
+			
+			for (int j = 2; j <= i; j *=2) {
+				myWriter.write("Pattern Length : " + j + "\n");
+				String pattern = Generater.generateBinaryText("all ones", j);
+	
+				long startTime = System.currentTimeMillis();	
+				KMP2 kmp = new KMP2(pattern);
+				int kmpIndex = kmp.search(txt1);
+				long endTime = System.currentTimeMillis();
+				long kmpTime = endTime - startTime;
+				
+				myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+						kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+			}
+			myWriter.write("\n");
+		}
+		
+		myWriter.write("--- CONDITION 1.2 FIND (N-2) 0 + 1 + 0 ---\n\n");
+		myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+		for (int i = 2; i <= 8192; i*=2) {
+			myWriter.write("Text Length : " + i + "\n");
+			String txt1 = Generater.generateBinaryText("all zeros", i);
+			
+			for (int j = 2; j <= i; j *=2) {
+				myWriter.write("Pattern Length : " + j + "\n");
+				String pattern = Generater.generateBinaryText("all zeros", j - 2) + "10";
+				
+				long startTime = System.currentTimeMillis();	
+				KMP2 kmp = new KMP2(pattern);
+				int kmpIndex = kmp.search(txt1);
+				long endTime = System.currentTimeMillis();
+				long kmpTime = endTime - startTime;
+				
+				myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+						kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+			}
+			myWriter.write("\n");
+		}
+		
+		myWriter.write("--- CONDITION 1.3 FIND N*0 IN (N-1) 0 + 1 + (N-1)0 ---\n\n");
+		myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+		for (int i = 2; i <= 8192; i*=2) {
+			myWriter.write("Text Length : " + (i*2-1) + "\n");
+			String txt1 = Generater.generateBinaryText("all zeros", i-1) + "1" + Generater.generateBinaryText("all zeros", i-1);
+			
+			for (int j = 2; j <= i; j *=2) {
+				myWriter.write("Pattern Length : " + j + "\n");
+				String pattern = Generater.generateBinaryText("all zeros", j);
+				
+				long startTime = System.currentTimeMillis();	
+				KMP2 kmp = new KMP2(pattern);
+				int kmpIndex = kmp.search(txt1);
+				long endTime = System.currentTimeMillis();
+				long kmpTime = endTime - startTime;
+				
+				myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+						kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+			}
+			myWriter.write("\n");
+		}
+		
+		myWriter.write("--- CONDITION 1.4 RANDOM ---\n\n");
+		myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+		for (int i = 2; i <= 8192; i*=2) {
+			myWriter.write("Text Length : " + i + "\n");
+			String txt1 = Generater.generateBinaryText("all zeros", i);
+			
+			for (int j = 2; j <= i; j *=2) {
+				myWriter.write("Pattern Length : " + j + "\n");
+				String pattern = Generater.generateBinaryText("random", j);
+				
+				long startTime = System.currentTimeMillis();	
+				KMP2 kmp = new KMP2(pattern);
+				int kmpIndex = kmp.search(txt1);
+				long endTime = System.currentTimeMillis();
+				long kmpTime = endTime - startTime;
+				
+				myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+						kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+			}
+			myWriter.write("\n");
+		}
+		
+		myWriter.close();
+		
+		// Condition 2: TEXT - random
+			// Condition 2.1 - find all 1
+			// Condition 2.2 - find (N-2) 0 + 1 + 0
+			// Condition 2.3 - find (N/2) 0 + 1 + (N/2)0
+			// Condition 2.4 - find random
+		
+		
+		myWriter = new BufferedWriter(new FileWriter("SearchResult" + "BinaryWorstCaseCondition2" + ".txt", false));
+
+		
+		myWriter.write("--- CONDITION 2.1 FIND ALL ONES ---\n\n");
+		myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+		for (int i = 2; i <= 8192; i*=2) {
+			myWriter.write("Text Length : " + i + "\n");
+			String txt1 = Generater.generateBinaryText("random", i);
+			
+			for (int j = 2; j <= i; j *=2) {
+				myWriter.write("Pattern Length : " + j + "\n");
+				String pattern = Generater.generateBinaryText("all ones", j);
+	
+				long startTime = System.currentTimeMillis();	
+				KMP2 kmp = new KMP2(pattern);
+				int kmpIndex = kmp.search(txt1);
+				long endTime = System.currentTimeMillis();
+				long kmpTime = endTime - startTime;
+				
+				myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+						kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+			}
+			myWriter.write("\n");
+		}
+		
+		myWriter.write("--- CONDITION 2.2 FIND (N-2) 0 + 1 + 0 ---\n\n");
+		myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+		for (int i = 2; i <= 8192; i*=2) {
+			myWriter.write("Text Length : " + i + "\n");
+			String txt1 = Generater.generateBinaryText("random", i);
+			
+			for (int j = 2; j <= i; j *=2) {
+				myWriter.write("Pattern Length : " + j + "\n");
+				String pattern = Generater.generateBinaryText("all zeros", j - 2) + "10";
+				
+				long startTime = System.currentTimeMillis();	
+				KMP2 kmp = new KMP2(pattern);
+				int kmpIndex = kmp.search(txt1);
+				long endTime = System.currentTimeMillis();
+				long kmpTime = endTime - startTime;
+				
+				myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+						kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+			}
+			myWriter.write("\n");
+		}
+		
+		myWriter.write("--- CONDITION 2.3 FIND N*0 IN (N-1) 0 + 1 + (N-1)0 ---\n\n");
+		myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+		for (int i = 2; i <= 8192; i*=2) {
+			myWriter.write("Text Length : " + (i*2-1) + "\n");
+			String txt1 = Generater.generateBinaryText("random", i-1) + "1" + Generater.generateBinaryText("random", i-1);
+			
+			for (int j = 2; j <= i; j *=2) {
+				myWriter.write("Pattern Length : " + j + "\n");
+				String pattern = Generater.generateBinaryText("all zeros", j);
+				
+				long startTime = System.currentTimeMillis();	
+				KMP2 kmp = new KMP2(pattern);
+				int kmpIndex = kmp.search(txt1);
+				long endTime = System.currentTimeMillis();
+				long kmpTime = endTime - startTime;
+				
+				myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+						kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+			}
+			myWriter.write("\n");
+		}
+		
+		myWriter.write("--- CONDITION 2.4 RANDOM ---\n\n");
+		myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+		for (int i = 2; i <= 8192; i*=2) {
+			myWriter.write("Text Length : " + i + "\n");
+			String txt1 = Generater.generateBinaryText("random", i);
+			
+			for (int j = 2; j <= i; j *=2) {
+				myWriter.write("Pattern Length : " + j + "\n");
+				String pattern = Generater.generateBinaryText("random", j);
+				
+				long startTime = System.currentTimeMillis();	
+				KMP2 kmp = new KMP2(pattern);
+				int kmpIndex = kmp.search(txt1);
+				long endTime = System.currentTimeMillis();
+				long kmpTime = endTime - startTime;
+				
+				myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+						kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+			}
+			myWriter.write("\n");
+		}
+		
+		myWriter.close();
+		
+		
+		// Condition 3 : Condition 2 + Fixed Text
+		String txt2 = Generater.generateRandomText("binary", 8192);
+
+		myWriter = new BufferedWriter(new FileWriter("SearchResult" + "BinaryWorstCaseCondition3" + ".txt", false));
+
+		
+		myWriter.write("--- CONDITION 3.1 FIND ALL ONES ---\n\n");
+		myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+		for (int j = 2; j <= 8192; j *=2) {
+			myWriter.write("Pattern Length : " + j + "\n");
+			String pattern = Generater.generateBinaryText("all ones", j);
 
 			long startTime = System.currentTimeMillis();	
-			KMP kmp = new KMP(pattern);
+			KMP2 kmp = new KMP2(pattern);
+			int kmpIndex = kmp.search(txt2);
+			long endTime = System.currentTimeMillis();
+			long kmpTime = endTime - startTime;
+			
+			myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+					kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+		}
+		myWriter.write("\n");
+		
+		myWriter.write("--- CONDITION 3.2 FIND (N-2) 0 + 1 + 0 ---\n\n");
+		myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+		for (int j = 2; j <= 8192; j *=2) {
+			myWriter.write("Pattern Length : " + j + "\n");
+			String pattern = Generater.generateBinaryText("all zeros", j - 2) + "10";
+			
+			long startTime = System.currentTimeMillis();	
+			KMP2 kmp = new KMP2(pattern);
+			int kmpIndex = kmp.search(txt2);
+			long endTime = System.currentTimeMillis();
+			long kmpTime = endTime - startTime;
+			
+			myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+					kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+		}
+		myWriter.write("\n");
+		
+		myWriter.write("--- CONDITION 3.3 FIND N*0 IN (N-1) 0 + 1 + (N-1)0 ---\n\n");
+		myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+		for (int j = 2; j <= 8192; j *=2) {
+				myWriter.write("Pattern Length : " + j + "\n");
+				String pattern = Generater.generateBinaryText("all zeros", j);
+				
+				long startTime = System.currentTimeMillis();	
+				KMP2 kmp = new KMP2(pattern);
+				int kmpIndex = kmp.search(txt2);
+				long endTime = System.currentTimeMillis();
+				long kmpTime = endTime - startTime;
+				
+				myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+						kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+			}
+		myWriter.write("\n");
+
+		
+		myWriter.write("--- CONDITION 3.4 RANDOM ---\n\n");
+		myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+		for (int j = 2; j <= 8192; j *=2) {
+			myWriter.write("Pattern Length : " + j + "\n");
+			String pattern = Generater.generateBinaryText("random", j);
+			
+			long startTime = System.currentTimeMillis();	
+			KMP2 kmp = new KMP2(pattern);
+			int kmpIndex = kmp.search(txt2);
+			long endTime = System.currentTimeMillis();
+			long kmpTime = endTime - startTime;
+			
+			myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+					kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+		}
+		myWriter.write("\n");
+		
+		
+		myWriter.close();
+		
+		
+
+	// Condition 4: 101010
+	myWriter = new BufferedWriter(new FileWriter("SearchResult" + "BinaryWorstCaseCondition4" + ".txt", false));
+
+	
+	myWriter.write("--- CONDITION 4.1 FIND ALL ONES ---\n\n");
+	myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+	for (int i = 2; i <= 8192; i*=2) {
+		myWriter.write("Text Length : " + i + "\n");
+		String txt1 = Generater.generateBinaryText("101010", i);
+		
+		for (int j = 2; j <= i; j *=2) {
+			myWriter.write("Pattern Length : " + j + "\n");
+			String pattern = Generater.generateBinaryText("all ones", j);
+
+			long startTime = System.currentTimeMillis();	
+			KMP2 kmp = new KMP2(pattern);
 			int kmpIndex = kmp.search(txt1);
 			long endTime = System.currentTimeMillis();
 			long kmpTime = endTime - startTime;
 			
-			myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP1", 
+			myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
 					kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
 		}
+		myWriter.write("\n");
+	}
+	
+	myWriter.write("--- CONDITION 2.2 FIND (N-2) 0 + 1 + 0 ---\n\n");
+	myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+	for (int i = 2; i <= 8192; i*=2) {
+		myWriter.write("Text Length : " + i + "\n");
+		String txt1 = Generater.generateBinaryText("101010", i);
+		
+		for (int j = 2; j <= i; j *=2) {
+			myWriter.write("Pattern Length : " + j + "\n");
+			String pattern = Generater.generateBinaryText("all zeros", j - 2) + "10";
+			
+			long startTime = System.currentTimeMillis();	
+			KMP2 kmp = new KMP2(pattern);
+			int kmpIndex = kmp.search(txt1);
+			long endTime = System.currentTimeMillis();
+			long kmpTime = endTime - startTime;
+			
+			myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+					kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+		}
+		myWriter.write("\n");
+	}
+	
+	myWriter.write("--- CONDITION 4.3 FIND N*0 IN (N-1) 0 + 1 + (N-1)0 ---\n\n");
+	myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+	for (int i = 2; i <= 8192; i*=2) {
+		String txt1 = Generater.generateBinaryText("101010", i-1) + "1" + Generater.generateBinaryText("101010", i-1);
+		myWriter.write("Text Length : " + txt1.length() + "\n");
 		
 		
+		for (int j = 2; j <= i; j *=2) {
+			myWriter.write("Pattern Length : " + j + "\n");
+			String pattern = Generater.generateBinaryText("all zeros", j);
+			
+			long startTime = System.currentTimeMillis();	
+			KMP2 kmp = new KMP2(pattern);
+			int kmpIndex = kmp.search(txt1);
+			long endTime = System.currentTimeMillis();
+			long kmpTime = endTime - startTime;
+			
+			myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+					kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+		}
+		myWriter.write("\n");
+	}
+	
+	myWriter.write("--- CONDITION 4.4 RANDOM ---\n\n");
+	myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+	for (int i = 2; i <= 8192; i*=2) {
+		myWriter.write("Text Length : " + i + "\n");
+		String txt1 = Generater.generateBinaryText("101010", i);
 		
-		String txt2 = Generater.generateRandomText("binary", 8192);
-		// Condition 2: TEXT - random
-			// Condition 1.1 - find all 1
-			// Condition 1.2 - find (N-1) 0 + 1 x 1
-			// Condition 1.3 - find (N/2) 0 + 1 + (N/2) 0
-			// Condition 1.4 - find random
+		for (int j = 2; j <= i; j *=2) {
+			myWriter.write("Pattern Length : " + j + "\n");
+			String pattern = Generater.generateBinaryText("random", j);
+			
+			long startTime = System.currentTimeMillis();	
+			KMP2 kmp = new KMP2(pattern);
+			int kmpIndex = kmp.search(txt1);
+			long endTime = System.currentTimeMillis();
+			long kmpTime = endTime - startTime;
+			
+			myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+					kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+		}
+		myWriter.write("\n");
+	}
+	
+	myWriter.write("--- CONDITION 4.5 FIND ABB in ABABAB ---\n\n");
+	myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
+
+	for (int i = 2; i <= 8192; i*=2) {
+		String txt1 = Generater.generateBinaryText("101010", i) + "100";
+		myWriter.write("Text Length : " + txt1.length() + "\n");
 		
+		String pattern = "001";
 		
-		myWriter.close();
+		long startTime = System.currentTimeMillis();	
+		KMP2 kmp = new KMP2(pattern);
+		int kmpIndex = kmp.search(txt1);
+		long endTime = System.currentTimeMillis();
+		long kmpTime = endTime - startTime;
+		
+		myWriter.write(String.format("%-20s %-20d %-24d %-20d %-20d %-20d %-20d\n\n", "KMP21", 
+				kmp.searchInspectTimes(), kmp.constructInspectTimes(), kmp.searchtimeUsed(), kmp.constructtimeUsed(), kmpTime, kmpIndex));
+
+		myWriter.write("\n");
+	}
+	
+	myWriter.close();
+		
 	}
 	
 	
-	private static void testAtoZMode() {
+	private static void testAtoZMode() throws IOException {
+		
+		myWriter = new BufferedWriter(new FileWriter("SearchResult" + "AtoZWorstCase" + ".txt", false));
+		
+		String str = "abcdefghijklmnopqrstuvwxy";
+		String pat = str + "z";
+		
+		String txt = new String(new char[200]).replace("\0", str) + "z";
+		
+		doSearchAndWriteToFile(txt, pat, 1);
+		
+		myWriter.close();
 		
 	}
 	

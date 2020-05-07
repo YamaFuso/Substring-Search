@@ -127,6 +127,11 @@ public class Generater {
 			for (int i = 0; i < length; i++) {
 				sb.append((char) asciiright);
 			}
+		} else if (mode.equals("101010")) {
+			for (int i = 0; i < length; i+=2) {
+				sb.append((char) asciiLeft);
+				sb.append((char) asciiright);
+			}
 		} else if (mode.equals("random")) {
 			Random rand = new Random();
 			for (int i = 0; i < length; i++) {
