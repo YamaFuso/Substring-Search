@@ -140,6 +140,29 @@ public class Main {
 	/**
 	 * Helper function to find worst case for binary text + patterns
 	 * @throws IOException 
+	 * 
+	 * I just dont want to refactor this code... 
+	 * Hardcoded all the possibilities we can come up with
+	 * 
+	 * 		// Condition 1: TEXT - all 0, 
+			// Condition 1.1 - find all 1
+			// Condition 1.2 - find (N-2) 0 + 1 + 0
+			// Condition 1.3 - find (N/2) 0 + 1 + (N/2)0
+			// Condition 1.4 - find random
+			
+	 * 		// Condition 2: TEXT - random
+			// Condition 2.1 - find all 1
+			// Condition 2.2 - find (N-2) 0 + 1 + 0
+			// Condition 2.3 - find (N/2) 0 + 1 + (N/2)0
+			// Condition 2.4 - find random
+			
+	 *      // Condition 3 : Condition 2 + Fixed Text
+			String txt2 = Generater.generateRandomText("binary", 8192);
+	 *
+	 * 		// Condition 4: 101010
+	 * 
+	 * If you want to switch between KMP1 and KMP2 -> Select all body of this method, search for KMP/KMP2, 
+	 * case sensitive, then replace with another one
 	 */
 	private static void testBinaryMode() throws IOException {
 		
@@ -151,7 +174,6 @@ public class Main {
 		
 		myWriter = new BufferedWriter(new FileWriter("SearchResult" + "BinaryWorstCaseCondition1" + ".txt", false));
 
-	
 		myWriter.write("--- CONDITION 1.1 FIND ALL ONES ---\n\n");
 		myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
 
@@ -462,7 +484,7 @@ public class Main {
 		myWriter.write("\n");
 	}
 	
-	myWriter.write("--- CONDITION 2.2 FIND (N-2) 0 + 1 + 0 ---\n\n");
+	myWriter.write("--- CONDITION 4.2 FIND (N-2) 0 + 1 + 0 ---\n\n");
 	myWriter.write(String.format("%-20s %-20s %-24s %-20s %-20s %-20s %-20s\n", "MODEL", "SEARCH INSPECT TIMES", "CONSTRUCT INSPECT TIMES", "SEARCH TIME(ms)", "CONSTRUCT TIME(ms)", "TOTAL TIME(ms)", "FOUND POSITION"));
 
 	for (int i = 2; i <= 8192; i*=2) {

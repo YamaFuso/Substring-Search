@@ -1,0 +1,1263 @@
+--- CONDITION 4.1 FIND ALL ONES ---
+
+MODEL                SEARCH INSPECT TIMES CONSTRUCT INSPECT TIMES  SEARCH TIME(ms)      CONSTRUCT TIME(ms)   TOTAL TIME(ms)       FOUND POSITION      
+Text Length : 2
+Pattern Length : 2
+KMP21                4                    2                        0                    0                    0                    -1                  
+
+
+Text Length : 4
+Pattern Length : 2
+KMP21                11                   2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                11                   6                        0                    0                    0                    -1                  
+
+
+Text Length : 8
+Pattern Length : 2
+KMP21                25                   2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                25                   6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                25                   14                       0                    0                    0                    -1                  
+
+
+Text Length : 16
+Pattern Length : 2
+KMP21                53                   2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                53                   6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                53                   14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                53                   30                       0                    0                    0                    -1                  
+
+
+Text Length : 32
+Pattern Length : 2
+KMP21                109                  2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                109                  6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                109                  14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                109                  30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                109                  62                       0                    0                    0                    -1                  
+
+
+Text Length : 64
+Pattern Length : 2
+KMP21                221                  2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                221                  6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                221                  14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                221                  30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                221                  62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                221                  126                      0                    0                    0                    -1                  
+
+
+Text Length : 128
+Pattern Length : 2
+KMP21                445                  2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                445                  6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                445                  14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                445                  30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                445                  62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                445                  126                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                445                  254                      0                    0                    0                    -1                  
+
+
+Text Length : 256
+Pattern Length : 2
+KMP21                893                  2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                893                  6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                893                  14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                893                  30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                893                  62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                893                  126                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                893                  254                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                893                  510                      0                    0                    0                    -1                  
+
+
+Text Length : 512
+Pattern Length : 2
+KMP21                1789                 2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                1789                 6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                1789                 14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                1789                 30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                1789                 62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                1789                 126                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                1789                 254                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                1789                 510                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                1789                 1022                     0                    0                    0                    -1                  
+
+
+Text Length : 1024
+Pattern Length : 2
+KMP21                3581                 2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                3581                 6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                3581                 14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                3581                 30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                3581                 62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                3581                 126                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                3581                 254                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                3581                 510                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                3581                 1022                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                3581                 2046                     0                    0                    0                    -1                  
+
+
+Text Length : 2048
+Pattern Length : 2
+KMP21                7165                 2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                7165                 6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                7165                 14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                7165                 30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                7165                 62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                7165                 126                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                7165                 254                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                7165                 510                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                7165                 1022                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                7165                 2046                     0                    0                    0                    -1                  
+
+Pattern Length : 2048
+KMP21                7165                 4094                     0                    0                    0                    -1                  
+
+
+Text Length : 4096
+Pattern Length : 2
+KMP21                14333                2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                14333                6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                14333                14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                14333                30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                14333                62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                14333                126                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                14333                254                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                14333                510                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                14333                1022                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                14333                2046                     0                    0                    0                    -1                  
+
+Pattern Length : 2048
+KMP21                14333                4094                     1                    0                    1                    -1                  
+
+Pattern Length : 4096
+KMP21                14333                8190                     0                    0                    0                    -1                  
+
+
+Text Length : 8192
+Pattern Length : 2
+KMP21                28669                2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                28669                6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                28669                14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                28669                30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                28669                62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                28669                126                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                28669                254                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                28669                510                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                28669                1022                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                28669                2046                     0                    0                    0                    -1                  
+
+Pattern Length : 2048
+KMP21                28669                4094                     0                    0                    0                    -1                  
+
+Pattern Length : 4096
+KMP21                28669                8190                     0                    0                    0                    -1                  
+
+Pattern Length : 8192
+KMP21                28669                16382                    0                    0                    0                    -1                  
+
+
+--- CONDITION 2.2 FIND (N-2) 0 + 1 + 0 ---
+
+MODEL                SEARCH INSPECT TIMES CONSTRUCT INSPECT TIMES  SEARCH TIME(ms)      CONSTRUCT TIME(ms)   TOTAL TIME(ms)       FOUND POSITION      
+Text Length : 2
+Pattern Length : 2
+KMP21                4                    2                        0                    0                    0                    -1                  
+
+
+Text Length : 4
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                14                   9                        0                    0                    0                    -1                  
+
+
+Text Length : 8
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                28                   9                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                28                   29                       0                    0                    0                    -1                  
+
+
+Text Length : 16
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                56                   9                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                56                   29                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                56                   69                       0                    0                    0                    -1                  
+
+
+Text Length : 32
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                112                  9                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                112                  29                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                112                  69                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                112                  149                      0                    0                    0                    -1                  
+
+
+Text Length : 64
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                224                  9                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                224                  29                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                224                  69                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                224                  149                      0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                224                  309                      0                    0                    0                    -1                  
+
+
+Text Length : 128
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                448                  9                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                448                  29                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                448                  69                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                448                  149                      0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                448                  309                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                448                  629                      0                    0                    0                    -1                  
+
+
+Text Length : 256
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                896                  9                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                896                  29                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                896                  69                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                896                  149                      0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                896                  309                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                896                  629                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                896                  1269                     0                    0                    0                    -1                  
+
+
+Text Length : 512
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                1792                 9                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                1792                 29                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                1792                 69                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                1792                 149                      0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                1792                 309                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                1792                 629                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                1792                 1269                     0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                1792                 2549                     0                    0                    0                    -1                  
+
+
+Text Length : 1024
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                3584                 9                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                3584                 29                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                3584                 69                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                3584                 149                      0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                3584                 309                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                3584                 629                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                3584                 1269                     0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                3584                 2549                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                3584                 5109                     0                    0                    0                    -1                  
+
+
+Text Length : 2048
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                7168                 9                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                7168                 29                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                7168                 69                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                7168                 149                      0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                7168                 309                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                7168                 629                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                7168                 1269                     0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                7168                 2549                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                7168                 5109                     0                    0                    0                    -1                  
+
+Pattern Length : 2048
+KMP21                7168                 10229                    0                    0                    0                    -1                  
+
+
+Text Length : 4096
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                14336                9                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                14336                29                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                14336                69                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                14336                149                      0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                14336                309                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                14336                629                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                14336                1269                     0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                14336                2549                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                14336                5109                     0                    0                    0                    -1                  
+
+Pattern Length : 2048
+KMP21                14336                10229                    0                    0                    0                    -1                  
+
+Pattern Length : 4096
+KMP21                14336                20469                    0                    0                    0                    -1                  
+
+
+Text Length : 8192
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                28672                9                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                28672                29                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                28672                69                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                28672                149                      0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                28672                309                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                28672                629                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                28672                1269                     0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                28672                2549                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                28672                5109                     0                    0                    0                    -1                  
+
+Pattern Length : 2048
+KMP21                28672                10229                    1                    0                    1                    -1                  
+
+Pattern Length : 4096
+KMP21                28672                20469                    0                    0                    0                    -1                  
+
+Pattern Length : 8192
+KMP21                28672                40949                    0                    0                    0                    -1                  
+
+
+--- CONDITION 4.3 FIND N*0 IN (N-1) 0 + 1 + (N-1)0 ---
+
+MODEL                SEARCH INSPECT TIMES CONSTRUCT INSPECT TIMES  SEARCH TIME(ms)      CONSTRUCT TIME(ms)   TOTAL TIME(ms)       FOUND POSITION      
+Text Length : 5
+Pattern Length : 2
+KMP21                16                   2                        0                    0                    0                    -1                  
+
+
+Text Length : 9
+Pattern Length : 2
+KMP21                30                   2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                30                   6                        0                    0                    0                    -1                  
+
+
+Text Length : 17
+Pattern Length : 2
+KMP21                58                   2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                58                   6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                58                   14                       0                    0                    0                    -1                  
+
+
+Text Length : 33
+Pattern Length : 2
+KMP21                114                  2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                114                  6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                114                  14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                114                  30                       0                    0                    0                    -1                  
+
+
+Text Length : 65
+Pattern Length : 2
+KMP21                226                  2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                226                  6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                226                  14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                226                  30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                226                  62                       0                    0                    0                    -1                  
+
+
+Text Length : 129
+Pattern Length : 2
+KMP21                450                  2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                450                  6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                450                  14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                450                  30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                450                  62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                450                  126                      0                    0                    0                    -1                  
+
+
+Text Length : 257
+Pattern Length : 2
+KMP21                898                  2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                898                  6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                898                  14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                898                  30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                898                  62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                898                  126                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                898                  254                      0                    0                    0                    -1                  
+
+
+Text Length : 513
+Pattern Length : 2
+KMP21                1794                 2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                1794                 6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                1794                 14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                1794                 30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                1794                 62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                1794                 126                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                1794                 254                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                1794                 510                      0                    0                    0                    -1                  
+
+
+Text Length : 1025
+Pattern Length : 2
+KMP21                3586                 2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                3586                 6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                3586                 14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                3586                 30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                3586                 62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                3586                 126                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                3586                 254                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                3586                 510                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                3586                 1022                     0                    0                    0                    -1                  
+
+
+Text Length : 2049
+Pattern Length : 2
+KMP21                7170                 2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                7170                 6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                7170                 14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                7170                 30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                7170                 62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                7170                 126                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                7170                 254                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                7170                 510                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                7170                 1022                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                7170                 2046                     0                    0                    0                    -1                  
+
+
+Text Length : 4097
+Pattern Length : 2
+KMP21                14338                2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                14338                6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                14338                14                       0                    0                    1                    -1                  
+
+Pattern Length : 16
+KMP21                14338                30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                14338                62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                14338                126                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                14338                254                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                14338                510                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                14338                1022                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                14338                2046                     0                    0                    0                    -1                  
+
+Pattern Length : 2048
+KMP21                14338                4094                     0                    0                    0                    -1                  
+
+
+Text Length : 8193
+Pattern Length : 2
+KMP21                28674                2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                28674                6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                28674                14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                28674                30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                28674                62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                28674                126                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                28674                254                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                28674                510                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                28674                1022                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                28674                2046                     0                    0                    0                    -1                  
+
+Pattern Length : 2048
+KMP21                28674                4094                     0                    0                    0                    -1                  
+
+Pattern Length : 4096
+KMP21                28674                8190                     0                    0                    0                    -1                  
+
+
+Text Length : 16385
+Pattern Length : 2
+KMP21                57346                2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                57346                6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                57346                14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                57346                30                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                57346                62                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                57346                126                      1                    0                    1                    -1                  
+
+Pattern Length : 128
+KMP21                57346                254                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                57346                510                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                57346                1022                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                57346                2046                     0                    0                    0                    -1                  
+
+Pattern Length : 2048
+KMP21                57346                4094                     0                    0                    0                    -1                  
+
+Pattern Length : 4096
+KMP21                57346                8190                     0                    0                    0                    -1                  
+
+Pattern Length : 8192
+KMP21                57346                16382                    0                    0                    0                    -1                  
+
+
+--- CONDITION 4.4 RANDOM ---
+
+MODEL                SEARCH INSPECT TIMES CONSTRUCT INSPECT TIMES  SEARCH TIME(ms)      CONSTRUCT TIME(ms)   TOTAL TIME(ms)       FOUND POSITION      
+Text Length : 2
+Pattern Length : 2
+KMP21                7                    2                        0                    0                    0                    -1                  
+
+
+Text Length : 4
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                11                   6                        0                    0                    0                    -1                  
+
+
+Text Length : 8
+Pattern Length : 2
+KMP21                4                    2                        0                    0                    0                    0                   
+
+Pattern Length : 4
+KMP21                25                   6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                19                   20                       0                    0                    0                    -1                  
+
+
+Text Length : 16
+Pattern Length : 2
+KMP21                56                   2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                50                   9                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                56                   23                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                50                   45                       0                    0                    0                    -1                  
+
+
+Text Length : 32
+Pattern Length : 2
+KMP21                109                  2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                109                  9                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                109                  14                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                109                  54                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                112                  104                      0                    0                    0                    -1                  
+
+
+Text Length : 64
+Pattern Length : 2
+KMP21                224                  2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                221                  12                       0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                221                  23                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                221                  42                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                221                  104                      0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                221                  210                      0                    0                    0                    -1                  
+
+
+Text Length : 128
+Pattern Length : 2
+KMP21                445                  2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                445                  9                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                448                  20                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                448                  45                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                448                  98                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                445                  192                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                445                  365                      0                    0                    0                    -1                  
+
+
+Text Length : 256
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                8                    6                        0                    0                    0                    0                   
+
+Pattern Length : 8
+KMP21                893                  23                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                890                  42                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                893                  98                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                890                  222                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                896                  440                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                893                  816                      0                    0                    0                    -1                  
+
+
+Text Length : 512
+Pattern Length : 2
+KMP21                1789                 2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                1789                 12                       0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                1789                 26                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                1780                 48                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                1792                 98                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                1786                 207                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                1789                 410                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                1789                 807                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                1789                 1649                     0                    0                    0                    -1                  
+
+
+Text Length : 1024
+Pattern Length : 2
+KMP21                3581                 2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                3584                 12                       0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                3581                 23                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                3578                 51                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                3584                 92                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                3581                 192                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                3578                 431                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                3581                 783                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                3581                 1679                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                3584                 3117                     0                    0                    0                    -1                  
+
+
+Text Length : 2048
+Pattern Length : 2
+KMP21                4                    2                        0                    0                    0                    0                   
+
+Pattern Length : 4
+KMP21                7165                 6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                7165                 17                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                7165                 39                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                7165                 86                       0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                7168                 192                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                7165                 437                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                7165                 918                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                7162                 1658                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                7165                 3318                     0                    0                    0                    -1                  
+
+Pattern Length : 2048
+KMP21                7165                 6272                     0                    0                    0                    -1                  
+
+
+Text Length : 4096
+Pattern Length : 2
+KMP21                6                    2                        0                    0                    0                    1                   
+
+Pattern Length : 4
+KMP21                14333                12                       0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                14333                20                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                14336                42                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                14333                104                      0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                14336                186                      0                    0                    0                    -1                  
+
+Pattern Length : 128
+KMP21                14333                386                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                14333                789                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                14336                1559                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                14336                3234                     0                    0                    0                    -1                  
+
+Pattern Length : 2048
+KMP21                14333                6194                     0                    0                    0                    -1                  
+
+Pattern Length : 4096
+KMP21                14333                14163                    0                    0                    0                    -1                  
+
+
+Text Length : 8192
+Pattern Length : 2
+KMP21                28669                2                        0                    0                    0                    -1                  
+
+Pattern Length : 4
+KMP21                28669                6                        0                    0                    0                    -1                  
+
+Pattern Length : 8
+KMP21                28669                23                       0                    0                    0                    -1                  
+
+Pattern Length : 16
+KMP21                28669                42                       0                    0                    0                    -1                  
+
+Pattern Length : 32
+KMP21                28660                107                      0                    0                    0                    -1                  
+
+Pattern Length : 64
+KMP21                28669                189                      1                    0                    1                    -1                  
+
+Pattern Length : 128
+KMP21                28666                419                      0                    0                    0                    -1                  
+
+Pattern Length : 256
+KMP21                28669                885                      0                    0                    0                    -1                  
+
+Pattern Length : 512
+KMP21                28672                1571                     0                    0                    0                    -1                  
+
+Pattern Length : 1024
+KMP21                28669                3513                     0                    0                    0                    -1                  
+
+Pattern Length : 2048
+KMP21                28669                6128                     0                    0                    0                    -1                  
+
+Pattern Length : 4096
+KMP21                28672                12795                    0                    0                    0                    -1                  
+
+Pattern Length : 8192
+KMP21                28669                25244                    0                    0                    0                    -1                  
+
+
+--- CONDITION 4.5 FIND ABB in ABABAB ---
+
+MODEL                SEARCH INSPECT TIMES CONSTRUCT INSPECT TIMES  SEARCH TIME(ms)      CONSTRUCT TIME(ms)   TOTAL TIME(ms)       FOUND POSITION      
+Text Length : 5
+KMP21                13                   7                        0                    0                    0                    -1                  
+
+
+Text Length : 7
+KMP21                20                   7                        0                    0                    0                    -1                  
+
+
+Text Length : 11
+KMP21                34                   7                        0                    0                    0                    -1                  
+
+
+Text Length : 19
+KMP21                62                   7                        0                    0                    0                    -1                  
+
+
+Text Length : 35
+KMP21                118                  7                        0                    0                    0                    -1                  
+
+
+Text Length : 67
+KMP21                230                  7                        0                    0                    0                    -1                  
+
+
+Text Length : 131
+KMP21                454                  7                        0                    0                    0                    -1                  
+
+
+Text Length : 259
+KMP21                902                  7                        0                    0                    0                    -1                  
+
+
+Text Length : 515
+KMP21                1798                 7                        0                    0                    0                    -1                  
+
+
+Text Length : 1027
+KMP21                3590                 7                        0                    0                    0                    -1                  
+
+
+Text Length : 2051
+KMP21                7174                 7                        0                    0                    0                    -1                  
+
+
+Text Length : 4099
+KMP21                14342                7                        0                    0                    0                    -1                  
+
+
+Text Length : 8195
+KMP21                28678                7                        0                    0                    0                    -1                  
+
+
