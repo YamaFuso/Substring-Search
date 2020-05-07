@@ -1,0 +1,10 @@
+--- SEARCH RESULT OF N 1000000 ---
+Length of text: 4194304
+Length of pattern: 1000000
+
+MODEL                SEARCH INSPECT TIMES CONSTRUCT INSPECT TIMES  SEARCH TIME(ms)      CONSTRUCT TIME(ms)   TOTAL TIME(ms)       FOUND POSITION      
+BRUTE FORCE          10377817             0                        14                   0                    14                   2645533             
+BRUTE FORCE2         9054611              0                        19                   0                    19                   2645533             
+KMP1                 3645533              1999999                  8                    644                  652                  2645533             
+KMP2                 9273844              2750982                  18                   7                    30                   2645533             
+

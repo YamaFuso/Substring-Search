@@ -6,31 +6,10 @@ public class KMP2 {
 	private char[] pattern;
 	
 	private int counter;
+	private int constructCounter;
+	private long constructTime = -1;
 	private long lastSearchTime = -1;
-	
-	
-	/**
-     * Slow method of pattern matching // another brute force
-     */
-    public boolean hasSubstring(char[] text, char[] pattern){
-        int i=0;
-        int j=0;
-        int k = 0;
-        while(i < text.length && j < pattern.length){
-            if(text[i] == pattern[j]){
-                i++;
-                j++;
-            }else{
-                j=0;
-                k++;
-                i = k;
-            }
-        }
-        if(j == pattern.length){
-            return true;
-        }
-        return false;
-    }
+
     
     /**
      * Compute temporary array to maintain size of suffix which is same as prefix
@@ -51,7 +30,7 @@ public class KMP2 {
                 i++;
             }else{
                 if(index != 0){
-                    index = lps[index-1];
+                    index = inspect(lps, index-1);
                 }else{
                     lps[i] = 0;
                     i++;
@@ -63,10 +42,14 @@ public class KMP2 {
         
         long endTime = System.currentTimeMillis();
         
-        System.out.println();
-        System.out.println("KMP2: Inspect During Construct : " + counter);
-        System.out.println("KMP2: Construct Time: " + (endTime - startTime));
-        System.out.println();
+//        System.out.println();
+//        System.out.println("KMP2: Inspect During Construct : " + counter);
+//        System.out.println("KMP2: Construct Time: " + (endTime - startTime));
+//        System.out.println();
+        
+        constructTime = endTime - startTime;
+		constructCounter = counter;
+		counter = 0;
         
         counter = 0;
     }
@@ -117,7 +100,11 @@ public class KMP2 {
     	
     }
     
-	public int totalInspectTimes() { return counter;}
+	public int searchInspectTimes() { return counter;}
 	
-	public long timeUsed() {return lastSearchTime;}
+	public long searchtimeUsed() {return lastSearchTime;}
+	
+	public int constructInspectTimes() { return constructCounter;}
+	
+	public long constructtimeUsed() {return constructTime;}
 }

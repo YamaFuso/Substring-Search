@@ -6,6 +6,8 @@ public class KMP {
 	private int[][] dfa;
 	
 	private int counter;
+	private int constructCounter;
+	private long constructTime = -1;
 	private long lastSearchTime = -1;
 	
 	public KMP(String pat) { // Build DFA from pattern.
@@ -26,11 +28,13 @@ public class KMP {
 		
 		
         long endTime = System.currentTimeMillis();
-        System.out.println();
-        System.out.println("KMP1: Inspect During Construct : " + counter);
-        System.out.println("KMP1: Construct Time: " + (endTime - startTime));
-        System.out.println();
-		
+//        System.out.println();
+//        System.out.println("KMP1: Inspect During Construct : " + counter);
+//        System.out.println("KMP1: Construct Time: " + (endTime - startTime));
+//        System.out.println();
+        
+        constructTime = endTime - startTime;
+		constructCounter = counter;
 		counter = 0;
 	}
 
@@ -50,7 +54,7 @@ public class KMP {
 //			System.out.println("String not found. Inspect times: " + counter);
 			long endTime = System.currentTimeMillis();
 			lastSearchTime = endTime - startTime;
-			return N; // not found (hit end of text)
+			return -1; // not found (hit end of text)
 		}
 	}
 
@@ -64,7 +68,12 @@ public class KMP {
 		return pat.charAt(index);
 	}
 	
-	public int totalInspectTimes() { return counter;}
+	public int searchInspectTimes() { return counter;}
 	
-	public long timeUsed() {return lastSearchTime;}
+	public long searchtimeUsed() {return lastSearchTime;}
+	
+	public int constructInspectTimes() { return constructCounter;}
+	
+	public long constructtimeUsed() {return constructTime;}
+	
 }
