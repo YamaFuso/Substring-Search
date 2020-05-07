@@ -2,6 +2,10 @@ package overall;
 
 public class KMP2 {
 
+	private int[] lps = null;
+	private char[] pattern;
+	private int counter;
+	
 	/**
      * Slow method of pattern matching
      */
@@ -29,9 +33,11 @@ public class KMP2 {
      * Compute temporary array to maintain size of suffix which is same as prefix
      * Time/space complexity is O(size of pattern)
      */
-    private int[] computeTemporaryArray(char pattern[]){
+    public KMP2(char pattern[]){
+    	this.pattern = pattern;
         int [] lps = new int[pattern.length];
         int index =0;
+        lps[0] = 0;
         for(int i=1; i < pattern.length;){
             if(pattern[i] == pattern[index]){
                 lps[i] = index + 1;
@@ -46,35 +52,50 @@ public class KMP2 {
                 }
             }
         }
-        return lps;
+        this.lps = lps;
     }
     
     /**
      * KMP algorithm of pattern matching.
      */
-    public boolean KMP(char []text, char []pattern){
+    public int search(char []text){
         
-        int lps[] = computeTemporaryArray(pattern);
+        //int lps[] = computeTemporaryArray(pattern);
         int i=0;
         int j=0;
         while(i < text.length && j < pattern.length){
-            if(text[i] == pattern[j]){
+            if(inspect(text,i) == inspect(pattern,j)){
                 i++;
                 j++;
             }else{
                 if(j!=0){
-                    j = lps[j-1];
+                    j = inspect(lps, j-1);
                 }else{
                     i++;
                 }
             }
         }
         if(j == pattern.length){
-            return true;
+        	System.out.println("String found. Inspect times: " + counter);
+            return i;
         }
-        return false;
+        System.out.println("String not found. Inspect times: " + counter);
+        return -1;
     }
-        
+    
+    private int inspect(int[] i, int j) {
+    	counter++;
+    	return i[j];
+    }
+    
+    private int inspect(char[] i, int j) {
+    	counter++;
+    	return i[j];
+    	
+    }
+    
+    
+    /*    
     public static void main(String args[]){
         
         String str = "abcxabcdabcdabcy";
@@ -84,4 +105,5 @@ public class KMP2 {
         System.out.print(result);
         
     }
+    */
 }

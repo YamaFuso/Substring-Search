@@ -4,6 +4,7 @@ public class KMP {
 
 	private String pat;
 	private int[][] dfa;
+	private int counter;
 
 	public KMP(String pat) { // Build DFA from pattern.
 		this.pat = pat;
@@ -17,17 +18,24 @@ public class KMP {
 			dfa[pat.charAt(j)][j] = j + 1; // Set match case.
 			X = dfa[pat.charAt(j)][X]; // Update restart state.
 		}
+		//counter = 0;
 	}
 
 	public int search(String txt) { // Simulate operation of DFA on txt.
 		int i, j, N = txt.length(), M = pat.length();
 		for (i = 0, j = 0; i < N && j < M; i++)
-			j = dfa[txt.charAt(i)][j];
-		if (j == M)
+			j = inspect(txt.charAt(i), j);
+		if (j == M) {
+			System.out.println("String found. Inspect times: " + counter);
 			return i - M; // found (hit end of pattern)
-		else
+		} else {
+			System.out.println("String not found. Inspect times: " + counter);
 			return N; // not found (hit end of text)
+		}
 	}
-	
 
+	private int inspect(char i, int j) {
+		counter++;
+		return dfa[i][j];
+	}
 }
