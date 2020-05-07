@@ -1,37 +1,114 @@
 package overall;
+
 import java.util.*;
+import java.io.*; 
 
 public class Main {
 
+	static BufferedWriter myWriter = null;
+	
 	public static void main(String[] args) {
 		// if you try print the text, you might not able to see it in console since it is too long
 		
-		//Generate gen = new Generate();
-		//BruteForce bf = new BruteForce();
 		
-		String txt = Generate.generateRandomText("binary");
-		String pat = Generate.generatePattern(txt);
+		doSearch(1, 100, "binary");
+		doSearch(1, 100, "DNA");
+		doSearch(1, 100, "a-z");
+	
+		
+
+
 		
 		
-		BruteForce.bruteForce(txt, pat);
 		
-		KMP kmp = new KMP(pat);
-		KMP2 kmp2 = new KMP2(pat.toCharArray());
+//		System.out.println("--- Initializing ---");
+//		
+////		String txt = Generater.generateRandomText("binary");
+////		String pat = Generater.generatePattern(txt);
+//		
+//		
+//
+//		System.out.println();
+//		BruteForce bf = new BruteForce(pat);
+//		KMP kmp = new KMP(pat);
+//		KMP2 kmp2 = new KMP2(pat.toCharArray());
+//		
+//		System.out.println("--- Initailization Finished ---\n");
+//		
+//		
+//		bf.search(txt);
+//		kmp.search(txt);
+//		kmp2.search(txt.toCharArray());
+//		
+//		System.out.println("--- SEARCH RESULT ---");
+//		System.out.printf("%-16s %-16s %-16s\n", "MODEL", "INSPECT TIMES", "TIME USED(ms)");
+//		System.out.printf("%-16s %-16s %-16s\n", "BRUTE FORCE", bf.totalInspectTimes(), bf.timeUsed());
+//		System.out.printf("%-16s %-16s %-16s\n", "KMP1", kmp.totalInspectTimes(), kmp.timeUsed());
+//		System.out.printf("%-16s %-16s %-16s\n", "KMP2", kmp2.totalInspectTimes(), kmp2.timeUsed());
 		
-		//        System.out.println("text: " + txt);
-		int offset = kmp.search(txt);
-		System.out.println("KMP1 offset: " + offset);
 		
-		int offset2 = kmp2.search(txt.toCharArray());
-		System.out.println("KMP2 offset: " + offset2);
 		//        System.out.print("pattern: ");
 		//        for (int i = 0; i < offset; i++)
 		//            System.out.print(" ");
 		//        System.out.println(pat);
 	}
 
-
+	private static boolean doSearchAndWriteToFile(String txt, String pat, int N){
+		
+		try {
+			myWriter.write(String.format("--- SEARCH RESULT OF N %d ---", N));
+			myWriter.write("Length of text: " + txt.length() + "\n");
+			myWriter.write("Length of pattern: " + pat.length() + "\n");
+			myWriter.write("\n");
 	
+			BruteForce bf = new BruteForce(pat);
+			KMP kmp = new KMP(pat);
+			KMP2 kmp2 = new KMP2(pat.toCharArray());
+			
+			bf.search(txt);
+			kmp.search(txt);
+			kmp2.search(txt.toCharArray());
+			
+			myWriter.write(String.format("%-16s %-16s %-16s\n", "MODEL", "INSPECT TIMES", "TIME USED(ms)"));
+			myWriter.write(String.format("%-16s %-16s %-16s\n", "BRUTE FORCE", bf.totalInspectTimes(), bf.timeUsed()));
+			myWriter.write(String.format("%-16s %-16s %-16s\n", "KMP1", kmp.totalInspectTimes(), kmp.timeUsed()));
+			myWriter.write(String.format("%-16s %-16s %-16s\n", "KMP2", kmp2.totalInspectTimes(), kmp2.timeUsed()));
+			myWriter.write("\n");
+		
+		} catch (IOException e) {System.out.printf("Write Error at N %d", N); return false;}
+		
+		return true;
+	}
+	
+	private static void doSearch(int startIndex, int endIndex, String mode) {
+		
+		String txt;
+		String pat;
+		
+		try {
+			myWriter = new BufferedWriter(new FileWriter("SearchResult" + mode + ".txt", false));
+		} catch (IOException e) {System.out.println("FILE IO ERROR" + mode); System.exit(-1);}
+		
+		for (int N = 1 ; N < 100 ; N ++) {
+			
+			txt = Generater.generateRandomText(mode);
+			pat = Generater.generatePattern(N);
+			
+			doSearchAndWriteToFile(txt, pat, N);
+		}
+		
+		
+		if (myWriter != null)
+			try {
+				myWriter.close();
+			} catch (IOException e) {
+				System.out.println("FILE FAIL TO CLOSE" + mode);
+				System.exit(-1);
+			}
+		
+		myWriter = null;
+		
+	}
 	
 
 	

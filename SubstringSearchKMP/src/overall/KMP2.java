@@ -4,10 +4,13 @@ public class KMP2 {
 
 	private int[] lps = null;
 	private char[] pattern;
+	
 	private int counter;
+	private long lastSearchTime = -1;
+	
 	
 	/**
-     * Slow method of pattern matching
+     * Slow method of pattern matching // another brute force
      */
     public boolean hasSubstring(char[] text, char[] pattern){
         int i=0;
@@ -34,12 +37,15 @@ public class KMP2 {
      * Time/space complexity is O(size of pattern)
      */
     public KMP2(char pattern[]){
+    	
+    	long startTime = System.currentTimeMillis();
+    	
     	this.pattern = pattern;
         int [] lps = new int[pattern.length];
         int index =0;
-        lps[0] = 0;
+
         for(int i=1; i < pattern.length;){
-            if(pattern[i] == pattern[index]){
+            if(inspect(pattern, i) == inspect(pattern, index)){
                 lps[i] = index + 1;
                 index++;
                 i++;
@@ -47,18 +53,30 @@ public class KMP2 {
                 if(index != 0){
                     index = lps[index-1];
                 }else{
-                    lps[i] =0;
+                    lps[i] = 0;
                     i++;
                 }
             }
         }
+        
         this.lps = lps;
+        
+        long endTime = System.currentTimeMillis();
+        
+        System.out.println();
+        System.out.println("KMP2: Inspect During Construct : " + counter);
+        System.out.println("KMP2: Construct Time: " + (endTime - startTime));
+        System.out.println();
+        
+        counter = 0;
     }
     
     /**
      * KMP algorithm of pattern matching.
      */
-    public int search(char []text){
+    public int search(char [] text){
+    	
+    	long startTime = System.currentTimeMillis();
         
         //int lps[] = computeTemporaryArray(pattern);
         int i=0;
@@ -76,10 +94,15 @@ public class KMP2 {
             }
         }
         if(j == pattern.length){
-        	System.out.println("String found. Inspect times: " + counter);
-            return i;
+//        	System.out.println("String found. Inspect times: " + counter);
+        	long endTime = System.currentTimeMillis();
+        	lastSearchTime = endTime - startTime;
+            return i - j;
         }
-        System.out.println("String not found. Inspect times: " + counter);
+        
+        long endTime = System.currentTimeMillis();
+        lastSearchTime = endTime - startTime;
+//        System.out.println("String not found. Inspect times: " + counter);
         return -1;
     }
     
@@ -94,16 +117,7 @@ public class KMP2 {
     	
     }
     
-    
-    /*    
-    public static void main(String args[]){
-        
-        String str = "abcxabcdabcdabcy";
-        String subString = "abcdabcy";
-        KMP2 ss = new KMP2();
-        boolean result = ss.KMP(str.toCharArray(), subString.toCharArray());
-        System.out.print(result);
-        
-    }
-    */
+	public int totalInspectTimes() { return counter;}
+	
+	public long timeUsed() {return lastSearchTime;}
 }

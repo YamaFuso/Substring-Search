@@ -2,7 +2,7 @@ package overall;
 
 import java.util.Random;
 
-public class Generate {
+public class Generater {
 
 	/**
      * Generate a random string between length 2^14-2^22
@@ -71,4 +71,25 @@ public class Generate {
 		}
 		return sb.toString();
 	}
+	
+	/**
+	 * Generate a random pattern of given length
+	 * @param length
+	 * @return
+	 */
+	public static String generatePattern(int length) {
+		
+		int asciiLeft = 48;
+		int asciiright = 49;
+		
+		Random rand = new Random();
+		StringBuilder sb = new StringBuilder(length);
+		for (int i = 0; i < length; i++) {
+			int randomSelect = asciiLeft + rand.nextInt(asciiright - asciiLeft + 1);
+			sb.append((char) randomSelect);
+		}
+		
+		return sb.toString();
+	}
+	
 }
