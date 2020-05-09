@@ -75,7 +75,11 @@ public class Generater {
      * @return a pattern that in the text
      */
 	public static String generatePattern(String text, int length){
+		
 		int textLength = text.length();
+		
+		if (textLength == length) return text;
+		
 		Random rand = new Random();
 		char[] c = text.toCharArray();
 		int position =  rand.nextInt(textLength-length);

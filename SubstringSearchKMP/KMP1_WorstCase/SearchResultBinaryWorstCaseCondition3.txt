@@ -1,0 +1,64 @@
+--- CONDITION 3.1 FIND ALL ONES ---
+
+	 PATTERN LENGTH	 SEARCH INSPECT TIMES	 CONSTRUCT INSPECT TIMES	 SEARCH TIME(ms)	 CONSTRUCT TIME(ms)	 TOTAL TIME(ms)	 FOUND POSITION	
+	 2	 14	 3	 0	 0	 0	 12	
+	 4	 66	 7	 0	 0	 0	 62	
+	 8	 1030	 15	 0	 0	 0	 1022	
+	 16	 8192	 31	 0	 0	 0	 -1	
+	 32	 8192	 63	 0	 0	 0	 -1	
+	 64	 8192	 127	 0	 0	 0	 -1	
+	 128	 8192	 255	 0	 0	 0	 -1	
+	 256	 8192	 511	 0	 0	 0	 -1	
+	 512	 8192	 1023	 0	 0	 0	 -1	
+	 1024	 8192	 2047	 0	 1	 1	 -1	
+	 2048	 8192	 4095	 0	 1	 1	 -1	
+	 4096	 8192	 8191	 0	 1	 1	 -1	
+	 8192	 8192	 16383	 0	 4	 4	 -1	
+--- CONDITION 3.2 FIND (N-2) 0 + 1 + 0 ---
+
+	 PATTERN LENGTH	 SEARCH INSPECT TIMES	 CONSTRUCT INSPECT TIMES	 SEARCH TIME(ms)	 CONSTRUCT TIME(ms)	 TOTAL TIME(ms)	 FOUND POSITION	
+	 2	 6	 3	 0	 0	 0	 4	
+	 4	 6	 7	 0	 0	 0	 2	
+	 8	 39	 15	 0	 0	 0	 31	
+	 16	 8192	 31	 0	 0	 0	 -1	
+	 32	 8192	 63	 0	 0	 0	 -1	
+	 64	 8192	 127	 0	 0	 0	 -1	
+	 128	 8192	 255	 0	 0	 0	 -1	
+	 256	 8192	 511	 0	 0	 0	 -1	
+	 512	 8192	 1023	 0	 1	 1	 -1	
+	 1024	 8192	 2047	 0	 0	 0	 -1	
+	 2048	 8192	 4095	 0	 1	 1	 -1	
+	 4096	 8192	 8191	 0	 2	 2	 -1	
+	 8192	 8192	 16383	 0	 5	 5	 -1	
+--- CONDITION 3.3 FIND N*0 IN (N-1) 0 + 1 + (N-1)0 ---
+
+	 PATTERN LENGTH	 SEARCH INSPECT TIMES	 CONSTRUCT INSPECT TIMES	 SEARCH TIME(ms)	 CONSTRUCT TIME(ms)	 TOTAL TIME(ms)	 FOUND POSITION	
+	 2	 2	 3	 0	 0	 0	 0	
+	 4	 4	 7	 0	 0	 0	 0	
+	 8	 36	 15	 0	 0	 0	 28	
+	 16	 8192	 31	 0	 0	 0	 -1	
+	 32	 8192	 63	 0	 0	 0	 -1	
+	 64	 8192	 127	 0	 0	 0	 -1	
+	 128	 8192	 255	 0	 0	 0	 -1	
+	 256	 8192	 511	 0	 0	 0	 -1	
+	 512	 8192	 1023	 0	 1	 1	 -1	
+	 1024	 8192	 2047	 0	 0	 0	 -1	
+	 2048	 8192	 4095	 0	 1	 1	 -1	
+	 4096	 8192	 8191	 0	 2	 2	 -1	
+	 8192	 8192	 16383	 0	 4	 4	 -1	
+--- CONDITION 3.4 RANDOM ---
+
+	 PATTERN LENGTH	 SEARCH INSPECT TIMES	 CONSTRUCT INSPECT TIMES	 SEARCH TIME(ms)	 CONSTRUCT TIME(ms)	 TOTAL TIME(ms)	 FOUND POSITION	
+	 2	 14	 3	 0	 0	 0	 12	
+	 4	 6	 7	 0	 0	 0	 2	
+	 8	 223	 15	 0	 0	 0	 215	
+	 16	 8192	 31	 0	 0	 0	 -1	
+	 32	 8192	 63	 0	 0	 0	 -1	
+	 64	 8192	 127	 0	 0	 0	 -1	
+	 128	 8192	 255	 0	 0	 0	 -1	
+	 256	 8192	 511	 0	 0	 0	 -1	
+	 512	 8192	 1023	 0	 0	 0	 -1	
+	 1024	 8192	 2047	 0	 1	 1	 -1	
+	 2048	 8192	 4095	 0	 1	 1	 -1	
+	 4096	 8192	 8191	 0	 2	 2	 -1	
+	 8192	 8192	 16383	 0	 7	 7	 -1	
