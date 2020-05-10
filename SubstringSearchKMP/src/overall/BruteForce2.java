@@ -1,6 +1,6 @@
+// Reference : https://github.com/mission-peace/interview/blob/master/src/com/interview/string/SubstringSearch.java
+
 package overall;
-
-
 
 /**
  * Brute force search through the text and look for first pattern

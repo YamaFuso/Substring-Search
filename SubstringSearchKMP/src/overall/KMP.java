@@ -1,3 +1,5 @@
+// Reference: Sedgewick, Robert, and Kevin Wayne. Algorithms, Fourth Edition. Addison-Wesley Professional, 2011.
+
 package overall;
 
 public class KMP {

@@ -1,3 +1,5 @@
+// Reference: https://github.com/mission-peace/interview/blob/master/src/com/interview/string/SubstringSearch.java
+
 package overall;
 
 public class KMP2 {
